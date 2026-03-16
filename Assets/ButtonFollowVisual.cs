@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -25,6 +26,7 @@ public class ButtonFollowVisual : MonoBehaviour
     { 
          if(hover.interactableObject is XRPokeInteractor)
         {
+            Console.WriteLine("Entered");
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
 
@@ -40,5 +42,5 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             visual.position = pokeAttachTransform.position + offset3;
         }
-    }a
+    }
 }

@@ -14,6 +14,5 @@ public class InputTest : MonoBehaviour
     {
         float value = _inputActionSelect.action.ReadValue<float>();
 
-        Debug.Log(value);
     }
 }
