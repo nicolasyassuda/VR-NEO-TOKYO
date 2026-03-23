@@ -21,6 +21,7 @@ public class PhysicalToggleButton : MonoBehaviour
     private Vector3 _lockedPosition;
     private float _bottomLimit;
 
+    public bool IsToggled => _toggledOn;
     private bool _toggledOn = false;   // is the button currently locked down?
     private bool _isPhysicallyDown = false;  // is the button physically past threshold?
     private bool _cooldown = false;
@@ -32,10 +33,7 @@ public class PhysicalToggleButton : MonoBehaviour
         _lockedPosition = new Vector3(_restPosition.x, _bottomLimit, _restPosition.z);
 
         buttonRigidbody.useGravity = false;
-        buttonRigidbody.constraints =
-            RigidbodyConstraints.FreezePositionX |
-            RigidbodyConstraints.FreezePositionZ |
-            RigidbodyConstraints.FreezeRotation;
+
     }
 
     void FixedUpdate()
